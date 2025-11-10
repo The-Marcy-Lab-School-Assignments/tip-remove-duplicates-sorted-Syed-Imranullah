@@ -15,8 +15,22 @@
  */
 
 const removeDuplicates = (nums) => {
-    //write your code here
+  //write your code here
+  if (nums.length === 0) return 0;
+  let unique = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (unique.indexOf(nums[i]) === -1) {
+      unique.push(nums[i]);
+    }
+  }
+  for (let i = 0; i < unique.length; i++) {
+    nums[i] = unique[i];
+  }
+  return unique.length;
 };
+
+// I was very confused to understand the question theredor i used AI's help to help me understand and come up with the solution
+
 
 // Example usage (commented out to avoid interference with tests)
 // const nums1 = [1, 1, 2];
